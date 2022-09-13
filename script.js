@@ -47,9 +47,15 @@ const checkIn = function (flightNum, passenger) {
 // console.log(flight);
 // console.log(ahmed);
 
-const newPassport = function (person) {
-  person.passportNum = Math.trunc(Math.random() * 10000000000);
+// const newPassport = function (person) {
+//   person.passportNum = Math.trunc(Math.random() * 10000000000);
+// };
+
+// newPassport(ahmed);
+// checkIn(flight, ahmed);
+
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
 };
 
-newPassport(ahmed);
-checkIn(flight, ahmed);
+console.log(oneWord('MY NAME IS AHMED'));

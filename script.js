@@ -71,3 +71,5 @@ const transformer = function (str, fn) {
 };
 
 transformer('AHmed', oneWord);
+
+transformer('i love JavaScript', upperFirstWord);

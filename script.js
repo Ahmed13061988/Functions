@@ -72,4 +72,9 @@ const transformer = function (str, fn) {
 
 transformer('AHmed', oneWord);
 
-transformer('i love JavaScript', upperFirstWord);
+transformer('i love JavaScript', upperFirstWord); //upperFirstWord and oneWord are callBack functions
+
+const high5 = function () {
+  console.log('👋');
+};
+document.body.addEventListener('click', high5);

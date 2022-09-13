@@ -32,7 +32,7 @@ const ahmed = {
 };
 
 const checkIn = function (flightNum, passenger) {
-  flightNum = 'LH999';
+  flightNum = 'LH999'; // this will not work, it will be the data that we passed not this data
   passenger.name = 'Mr.' + passenger.name;
 
   if (passenger.passportNum === 12435332542) {
@@ -42,7 +42,14 @@ const checkIn = function (flightNum, passenger) {
   }
 };
 
-checkIn(flight, ahmed);
+//checkIn(flight, ahmed);
 
-console.log(flight);
-console.log(ahmed);
+// console.log(flight);
+// console.log(ahmed);
+
+const newPassport = function (person) {
+  person.passportNum = Math.trunc(Math.random() * 10000000000);
+};
+
+newPassport(ahmed);
+checkIn(flight, ahmed);

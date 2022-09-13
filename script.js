@@ -58,4 +58,16 @@ const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();
 };
 
-console.log(oneWord('MY NAME IS AHMED'));
+const upperFirstWord = function (str) {
+  const [firstWord, ...others] = str.split(' ');
+  return [firstWord.toUpperCase(), ...others].join(' ');
+};
+
+const transformer = function (str, fn) {
+  console.log(`Original string ${str}`);
+  console.log(`Transformed String ${fn(str)}`);
+  console.log(`${fn.name}`);
+  // Higher-order function
+};
+
+transformer('AHmed', oneWord);

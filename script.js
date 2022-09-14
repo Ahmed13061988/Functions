@@ -70,11 +70,22 @@ const transformer = function (str, fn) {
   // Higher-order function
 };
 
-transformer('AHmed', oneWord);
+//transformer('AHmed', oneWord);
 
-transformer('i love JavaScript', upperFirstWord); //upperFirstWord and oneWord are callBack functions
+//transformer('i love JavaScript', upperFirstWord); //upperFirstWord and oneWord are callBack functions
 
 const high5 = function () {
   console.log('👋');
 };
 document.body.addEventListener('click', high5);
+
+const multiply = function (number) {
+  const [num1, ...numbers] = number;
+  return num1;
+};
+
+const solve = function (num, fun) {
+  console.log(`${fun(num)}`);
+};
+
+solve([1, 2, 3, 4], multiply);

@@ -121,7 +121,23 @@ const lufthanza = {
     console.log(
       `${name}, booked a seat on ${this.airline} flight ${this.iataCode}${fligthNum}`
     );
+    this.bookings.push({ fligth: `${this.iataCode}${fligthNum}`, name });
   },
 };
 
 lufthanza.book(100, 'Ahmed');
+lufthanza.book(365, 'John Smith');
+console.log(lufthanza);
+
+const book = lufthanza.book;
+const eurowings = {
+  name: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+console.log(eurowings);
+
+// book(234, "john smith") ==> this will throw an error because this keyword will be undefined
+
+book.call(eurowings, 234, 'Ahmed Alubaidi');

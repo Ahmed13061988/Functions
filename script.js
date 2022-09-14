@@ -104,3 +104,7 @@ greeterHey('Ahmed');
 greeterHey('Ali');
 
 greet('Hello')('Ahmed');
+
+const greetArrow = greeting => name => console.log(`${greeting}, ${name}`);
+
+greetArrow('Hi')('Abbas');

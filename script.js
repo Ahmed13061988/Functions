@@ -108,3 +108,8 @@ greet('Hello')('Ahmed');
 const greetArrow = greeting => name => console.log(`${greeting}, ${name}`);
 
 greetArrow('Hi')('Abbas');
+
+const long = x1 => x2 => x3 => x4 => x5 => x6 => x7 => x8 => x9 => x10 =>
+  console.log(`${x1} ${x2} ${x3} ${x4} ${x5} ${x6} ${x7} ${x8} ${x9} ${x10}`);
+
+long('Why')('am')('I')('doing')('this')('with')('my')('precious')('time')('?');

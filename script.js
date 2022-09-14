@@ -102,3 +102,5 @@ const greeterHey = greet('Hey');
 
 greeterHey('Ahmed');
 greeterHey('Ali');
+
+greet('Hello')('Ahmed');

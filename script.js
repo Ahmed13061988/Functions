@@ -119,7 +119,9 @@ const lufthanza = {
   bookings: [],
   book(fligthNum, name) {
     console.log(
-      `${name}, booked a seat on ${this.airline} flight ${this.iataCode} ${fligthNum}`
+      `${name}, booked a seat on ${this.airline} flight ${this.iataCode}${fligthNum}`
     );
   },
 };
+
+lufthanza.book(100, 'Ahmed');

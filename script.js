@@ -151,4 +151,5 @@ const iraq = {
 };
 
 book.call(iraq, 256, 'Abbas Abd Djamil');
+book.apply(iraq, [234, 'Ammar Alsa3ede']);
 console.log(iraq);

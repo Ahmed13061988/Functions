@@ -156,3 +156,7 @@ const info = [244, 'Atyaf Almahdi'];
 book.apply(iraq, [234, 'Ammar Alsa3ede']);
 book.call(iraq, ...info);
 console.log(iraq);
+
+const bookEu = book.bind(eurowings); //Bind always returns a new function
+
+bookEu(213, 'Ahmed'); // this function will be used only on eurowing object

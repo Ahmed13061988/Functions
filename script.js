@@ -162,4 +162,15 @@ const bookIq = book.bind(iraq);
 const bookLh = book.bind(lufthanza);
 const bookEu23 = book.bind(eurowings, 23); // specify the flight number by passing it to the arguements.
 bookEu23('Mawlood');
+bookEu23('Adil');
 bookEu(213, 'Ahmed'); // this function will be used only on eurowing object
+
+lufthanza.planes = 300;
+lufthanza.buyPlane = function () {
+  this.planes++;
+  console.log(this.planes);
+  console.log(this);
+};
+
+const btn = document.querySelector('.buy');
+btn.addEventListener('click', lufthanza.buyPlane.bind(lufthanza));

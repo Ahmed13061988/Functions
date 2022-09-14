@@ -158,5 +158,8 @@ book.call(iraq, ...info);
 console.log(iraq);
 
 const bookEu = book.bind(eurowings); //Bind always returns a new function
-
+const bookIq = book.bind(iraq);
+const bookLh = book.bind(lufthanza);
+const bookEu23 = book.bind(eurowings, 23); // specify the flight number by passing it to the arguements.
+bookEu23('Mawlood');
 bookEu(213, 'Ahmed'); // this function will be used only on eurowing object

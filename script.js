@@ -131,7 +131,7 @@ console.log(lufthanza);
 
 const book = lufthanza.book;
 const eurowings = {
-  name: 'Eurowings',
+  airline: 'Eurowings',
   iataCode: 'EW',
   bookings: [],
 };
@@ -141,3 +141,14 @@ console.log(eurowings);
 // book(234, "john smith") ==> this will throw an error because this keyword will be undefined
 
 book.call(eurowings, 234, 'Ahmed Alubaidi');
+
+console.log(eurowings);
+
+const iraq = {
+  airline: 'Iraqi Air Lines',
+  iataCode: 'IQ',
+  bookings: [],
+};
+
+book.call(iraq, 256, 'Abbas Abd Djamil');
+console.log(iraq);

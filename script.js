@@ -81,7 +81,7 @@ document.body.addEventListener('click', high5);
 
 const multiply = function (number) {
   const [num1, ...numbers] = number;
-  return num1;
+  return [num1], [numbers];
 };
 
 const solve = function (num, fun) {
@@ -89,3 +89,16 @@ const solve = function (num, fun) {
 };
 
 solve([1, 2, 3, 4], multiply);
+
+//Function returning a function
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting}, ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+
+greeterHey('Ahmed');
+greeterHey('Ali');

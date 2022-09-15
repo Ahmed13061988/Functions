@@ -201,3 +201,5 @@ const runOnce = function () {
 (function () {
   console.log('This will never run again');
 })();
+
+(() => console.log('arrow function that will called once'))();

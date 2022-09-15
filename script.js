@@ -191,3 +191,13 @@ const addTaxRate = function (rate) {
 
 const addVAT1 = addTaxRate(0.23);
 console.log(addVAT1(100));
+
+console.log('-------------------------------');
+
+const runOnce = function () {
+  console.log('This will never run again');
+};
+
+(function () {
+  console.log('This will never run again');
+})();

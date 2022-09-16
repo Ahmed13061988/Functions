@@ -140,63 +140,63 @@ console.log(eurowings);
 
 // book(234, "john smith") ==> this will throw an error because this keyword will be undefined
 
-book.call(eurowings, 234, 'Ahmed Alubaidi');
+// book.call(eurowings, 234, 'Ahmed Alubaidi');
 
-console.log(eurowings);
+// console.log(eurowings);
 
-const iraq = {
-  airline: 'Iraqi Air Lines',
-  iataCode: 'IQ',
-  bookings: [],
-};
+// const iraq = {
+//   airline: 'Iraqi Air Lines',
+//   iataCode: 'IQ',
+//   bookings: [],
+// };
 
-book.call(iraq, 256, 'Abbas Abd Djamil');
+// book.call(iraq, 256, 'Abbas Abd Djamil');
 
-const info = [244, 'Atyaf Almahdi'];
-book.apply(iraq, [234, 'Ammar Alsa3ede']);
-book.call(iraq, ...info);
-console.log(iraq);
+// const info = [244, 'Atyaf Almahdi'];
+// book.apply(iraq, [234, 'Ammar Alsa3ede']);
+// book.call(iraq, ...info);
+// console.log(iraq);
 
-const bookEu = book.bind(eurowings); //Bind always returns a new function
-const bookIq = book.bind(iraq);
-const bookLh = book.bind(lufthanza);
-const bookEu23 = book.bind(eurowings, 23); // specify the flight number by passing it to the arguements.
-bookEu23('Mawlood');
-bookEu23('Adil');
-bookEu(213, 'Ahmed'); // this function will be used only on eurowing object
+// const bookEu = book.bind(eurowings); //Bind always returns a new function
+// const bookIq = book.bind(iraq);
+// const bookLh = book.bind(lufthanza);
+// const bookEu23 = book.bind(eurowings, 23); // specify the flight number by passing it to the arguements.
+// bookEu23('Mawlood');
+// bookEu23('Adil');
+// bookEu(213, 'Ahmed'); // this function will be used only on eurowing object
 
-lufthanza.planes = 300;
-lufthanza.buyPlane = function () {
-  this.planes++;
-  console.log(this.planes);
-  console.log(this);
-};
+// lufthanza.planes = 300;
+// lufthanza.buyPlane = function () {
+//   this.planes++;
+//   console.log(this.planes);
+//   console.log(this);
+// };
 
-const btn = document.querySelector('.buy');
-btn.addEventListener('click', lufthanza.buyPlane.bind(lufthanza));
+// const btn = document.querySelector('.buy');
+// btn.addEventListener('click', lufthanza.buyPlane.bind(lufthanza));
 
-const addTax = (rate, value) => value + value * rate;
+// const addTax = (rate, value) => value + value * rate;
 
-console.log(addTax(0.1, 200));
+// console.log(addTax(0.1, 200));
 
-const addVAT = addTax.bind(null, 0.23);
+// const addVAT = addTax.bind(null, 0.23);
 
-console.log(addVAT(200));
+// console.log(addVAT(200));
 
-const addTaxRate = function (rate) {
-  return function (value) {
-    return value + value * rate;
-  };
-};
+// const addTaxRate = function (rate) {
+//   return function (value) {
+//     return value + value * rate;
+//   };
+// };
 
-const addVAT1 = addTaxRate(0.23);
-console.log(addVAT1(100));
+// const addVAT1 = addTaxRate(0.23);
+// console.log(addVAT1(100));
 
 console.log('-------------------------------');
 
-const runOnce = function () {
-  console.log('This will never run again');
-};
+// const runOnce = function () {
+//   console.log('This will never run again');
+// };
 
 // (function () {
 //   console.log('This will never run again');
@@ -204,4 +204,13 @@ const runOnce = function () {
 
 // (() => console.log('arrow function that will called once'))();
 
-const secureBooking = function () {};
+const secureBooking = function () {
+  let passengerCount = 0;
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+booker();

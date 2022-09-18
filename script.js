@@ -223,6 +223,7 @@ const booker = secureBooking();
 //A closure makes sure that a function doesn't loose connection to the variables that existed at the function's birthplace.
 console.dir(booker);
 
+//Example 1
 let f;
 
 const g = function () {
@@ -241,7 +242,16 @@ const h = function () {
 
 g();
 f();
+console.dir(f);
 
 // The f() here is a different function
 h();
 f();
+console.dir(f);
+
+//Example 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+  setTimeout(() => {}, 1000);
+  console.log(`Will start boarding in ${wait} seconds`);
+};

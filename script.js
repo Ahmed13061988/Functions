@@ -213,12 +213,24 @@ const secureBooking = function () {
 };
 
 const booker = secureBooking();
-booker();
-booker();
-booker();
-booker();
+// booker();
+// booker();
+// booker();
+// booker();
 
 //a closure gives a function access to all variables of it's parent function, even after the parent function returned has returned. The function keeps reference to it's outer scope, which preserves the scope chain throughtout time.
 
 //A closure makes sure that a function doesn't loose connection to the variables that existed at the function's birthplace.
 console.dir(booker);
+
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+g();
+f();

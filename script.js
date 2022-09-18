@@ -232,5 +232,16 @@ const g = function () {
   };
 };
 
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
 g();
+f();
+
+// The f() here is a different function
+h();
 f();
